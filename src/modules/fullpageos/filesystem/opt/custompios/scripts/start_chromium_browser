@@ -11,6 +11,7 @@ flags=(
    --overscroll-history-navigation=0
    --disable-features=TranslateUI
    --autoplay-policy=no-user-gesture-required
+   --disk-cache-size=500000000
 )
 
 # Standard behavior - runs chromium
