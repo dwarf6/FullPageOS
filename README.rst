@@ -77,7 +77,7 @@ You can build it by issuing the following commands::
     
     git clone https://github.com/dwarf6/CustomPiOS.git
     git clone https://github.com/dwarf6/FullPageOS64.git
-    cd FullPageOS64/src/image
+    cd FullPageOS64/src/image-raspberrypiarm64
     wget -c --trust-server-names 'https://downloads.raspberrypi.org/raspios_lite_arm64_latest'
     cd ..
     ../../CustomPiOS/src/update-custompios-paths
