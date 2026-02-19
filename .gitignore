@@ -9,3 +9,6 @@ src/workspace*/*
 src/variants/*
 !src/variants/no-acceleration
 *.img.xz
+*.img.xz
+*.img
+*.xz
