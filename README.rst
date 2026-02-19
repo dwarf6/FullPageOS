@@ -73,12 +73,12 @@ FullPageOS can be built from Debian, Ubuntu, Raspbian, or even FullPageOS.
 Build requires about 2.5 GB of free space available.
 You can build it by issuing the following commands::
 
-    sudo apt install coreutils p7zip-full qemu-user-static
+    sudo apt install coreutils p7zip-full qemu-user-static python3-yaml python3-git
     
     git clone https://github.com/guysoft/CustomPiOS.git
     git clone https://github.com/guysoft/FullPageOS.git
     cd FullPageOS/src/image
-    wget -c --trust-server-names 'https://downloads.raspberrypi.org/raspios_lite_armhf_latest'
+    wget -c --trust-server-names 'https://downloads.raspberrypi.org/raspios_lite_arm64_latest'
     cd ..
     ../../CustomPiOS/src/update-custompios-paths
     sudo modprobe loop
