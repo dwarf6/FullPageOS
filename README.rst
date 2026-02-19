@@ -76,8 +76,8 @@ You can build it by issuing the following commands::
     sudo apt install coreutils p7zip-full qemu-user-static python3-yaml python3-git
     
     git clone https://github.com/dwarf6/CustomPiOS.git
-    git clone https://github.com/dwarf6/FullPageOS.git
-    cd FullPageOS/src/image
+    git clone https://github.com/dwarf6/FullPageOS64.git
+    cd FullPageOS64/src/image
     wget -c --trust-server-names 'https://downloads.raspberrypi.org/raspios_lite_arm64_latest'
     cd ..
     ../../CustomPiOS/src/update-custompios-paths
