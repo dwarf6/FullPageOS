@@ -170,12 +170,6 @@ fi
 echo "server time.nist.gov" >> /etc/ntp.conf
 echo "server ntp.ubuntu.com" >> /etc/ntp.conf
 
-#cleanup
-apt-get clean
-apt-get autoremove -y
-
-sudo tee -a /home/virtualadmin/FullPageOS64/src/modules/fullpageos/start_chroot_script >/dev/null <<'EOF'
-
 # --- Kiosk: disable serial console on HDMI to avoid "press Enter" ---
 for f in /boot/firmware/cmdline.txt /boot/cmdline.txt; do
   if [ -f "$f" ]; then
@@ -184,3 +178,9 @@ for f in /boot/firmware/cmdline.txt /boot/cmdline.txt; do
   fi
 done
 EOF
+
+#cleanup
+apt-get clean
+apt-get autoremove -y
+
+sudo tee -a /home/virtualadmin/FullPageOS64/src/modules/fullpageos/start_chroot_script >/dev/null <<'EOF'
