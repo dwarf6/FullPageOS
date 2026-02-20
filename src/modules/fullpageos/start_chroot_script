@@ -177,10 +177,8 @@ for f in /boot/firmware/cmdline.txt /boot/cmdline.txt; do
     sed -i -E 's@(^| )console=(serial0|ttyAMA0),115200@@g; s@  +@ @g; s@^ @@; s@ $@@' "$f"
   fi
 done
-EOF
 
 #cleanup
 apt-get clean
 apt-get autoremove -y
 
-sudo tee -a /home/virtualadmin/FullPageOS64/src/modules/fullpageos/start_chroot_script >/dev/null <<'EOF'
