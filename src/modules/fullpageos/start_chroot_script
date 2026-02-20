@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+p#!/usr/bin/env bash
 # FullPageOS generation script
 # Helper script that runs in a Raspbian/others chroot to create the FullPageOS distro
 # Written by Guy Sheffer <guysoft at gmail dot com>
@@ -173,3 +173,14 @@ echo "server ntp.ubuntu.com" >> /etc/ntp.conf
 #cleanup
 apt-get clean
 apt-get autoremove -y
+
+sudo tee -a /home/virtualadmin/FullPageOS64/src/modules/fullpageos/start_chroot_script >/dev/null <<'EOF'
+
+# --- Kiosk: disable serial console on HDMI to avoid "press Enter" ---
+for f in /boot/firmware/cmdline.txt /boot/cmdline.txt; do
+  if [ -f "$f" ]; then
+    # remove console=serial0,115200 (and common variants)
+    sed -i -E 's@(^| )console=(serial0|ttyAMA0),115200@@g; s@  +@ @g; s@^ @@; s@ $@@' "$f"
+  fi
+done
+EOF
